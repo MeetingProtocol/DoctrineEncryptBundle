@@ -1,3 +1,7 @@
+**WIP - use at your own risk**
+* SF4 compatibility
+* OPenSSL Encryption
+
 #DoctrineEncryptBundle
 
 Bundle allows to create doctrine entities with fields that will be protected with 
