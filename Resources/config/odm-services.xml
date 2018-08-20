@@ -6,13 +6,13 @@
         
     <services>
         <!-- Encryption service(subscriber) for encrypt/decrypt entities properties -->    
-        <service id="tdm_doctrine_encrypt.odm_subscriber.encrypt" class="TDM\DoctrineEncryptBundle\Subscribers\ODM\ODMEncrypt">
+        <service id="tdm_doctrine_encrypt.odm_subscriber.encrypt" class="TDM\DoctrineEncryptBundle\Subscribers\ODM\ODMEncrypt" public="true">
             <argument type="service" id="annotation_reader" />
             <tag name="doctrine_mongodb.odm.event_listener" event="prePersist" priority="-1000"/>
             <tag name="doctrine_mongodb.odm.event_listener" event="preUpdate" priority="-1000"/>
         </service>
         <!-- Decryption service(subscriber) for encrypt/decrypt entities properties -->    
-        <service id="tdm_doctrine_encrypt.odm_subscriber.decrypt" class="TDM\DoctrineEncryptBundle\Subscribers\ODM\ODMDecrypt">
+        <service id="tdm_doctrine_encrypt.odm_subscriber.decrypt" class="TDM\DoctrineEncryptBundle\Subscribers\ODM\ODMDecrypt" public="true">
             <argument type="service" id="annotation_reader" />
             <tag name="doctrine_mongodb.odm.event_subscriber" priority="1000"/>
         </service>

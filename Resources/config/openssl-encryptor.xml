@@ -5,9 +5,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
         
     <services>
-        <!-- Default encryption service -->    
-        <service id="tdm_doctrine_encrypt.encryptor.default" class="TDM\DoctrineEncryptBundle\Encryptors\OpenSslEncryptor" public="true">
-        </service>        
+        <service id="tdm_doctrine_encrypt.encryptors.openssl" class="TDM\DoctrineEncryptBundle\Encryptors\OpenSslEncryptor" public="true">
+        </service>
     </services>
 </container>
-
